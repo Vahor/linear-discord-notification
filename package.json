@@ -1,0 +1,25 @@
+{
+  "name": "linear-discord-notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "author": "Nathan David <me@vahor.fr>",
+  "license": "MIT",
+  "scripts": {
+    "start": "bun src/index.ts"
+  },
+  "keywords": [
+    "linear",
+    "discord",
+    "notification",
+    "webhook"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "typescript": "^5.2.2",
+    "bun-types": "latest"
+  }
+}
