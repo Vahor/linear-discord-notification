@@ -1,6 +1,6 @@
 #Simple size about 400Mb
 
-FROM oven/bun:latest as build-stage
+FROM oven/bun:latest AS build-stage
 
 WORKDIR /dist
 
@@ -21,7 +21,10 @@ COPY --from=build-stage /dist/server ./server
 
 ARG PORT=8000
 ENV PORT=$PORT
+ENV NODE_ENV=production
 
 EXPOSE $PORT
 
 CMD ["./server"]
+
+# lin_wh_UCoplCt6h43DFeq5AE6F0DYlQVKBFn4czFgGe3bhifuJ
