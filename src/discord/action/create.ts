@@ -41,6 +41,6 @@ const buildPayload = (payload: Payload) => {
         ],
         username: "Linear",
         attachments: [],
-        avatar_url: "https://github.com/Vahor/linear-discord-notification/.github/assets/linear-app-icon.png",
+        avatar_url: "https://raw.githubusercontent.com/Vahor/linear-discord-notification/main/.github/assets/linear-app-icon.png",
     }
 }
