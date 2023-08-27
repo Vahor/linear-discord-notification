@@ -7,6 +7,8 @@ declare global {
 
 // define server parameters
 const serveOptions: Serve = {
+    hostname: '0.0.0.0',
+    port: process.env.PORT ?? 8080,
     fetch(req) {
         const url = new URL(req.url);
         return new Response(JSON.stringify(url));
@@ -19,4 +21,4 @@ if (!globalThis.server) {
     globalThis.server.reload(serveOptions);
 }
 
-console.log(`Server started at http://${serveOptions.hostname ?? '0.0.0.0'}:${serveOptions.port}`);
+console.log(`Server started at http://${serveOptions.hostname}:${serveOptions.port}`);
