@@ -7,7 +7,6 @@ declare global {
 
 // define server parameters
 const serveOptions: Serve = {
-    port: 3000,
     fetch(req) {
         const url = new URL(req.url);
         return new Response(JSON.stringify(url));
