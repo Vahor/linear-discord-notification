@@ -13,7 +13,7 @@ RUN bun install
 RUN bun build ./src/index.ts --minify --compile --outfile server
 
 # Reduce image size
-FROM --platform=linux/amd64 oven/bun:latest
+FROM oven/bun:latest
 
 WORKDIR /app
 
