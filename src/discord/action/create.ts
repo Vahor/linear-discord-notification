@@ -18,7 +18,7 @@ const buildPayload = (payload: Payload) => {
         content: null,
         embeds: [
             {
-                title: payload.data.title,
+                title: `#${payload.data.number} - ${payload.data.title}`,
                 url: payload.url,
                 color: 6187730,
                 fields: [
