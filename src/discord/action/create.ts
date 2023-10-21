@@ -24,7 +24,7 @@ const buildPayload = (payload: Payload) => {
                 fields: [
                     {
                         name: "Description",
-                        value: payload.data.description,
+                        value: payload.data.description ?? "No description",
                     },
                     {
                         name: "Priority",

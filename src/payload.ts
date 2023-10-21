@@ -40,8 +40,8 @@ export const DataSchema = z.object({
   "state": StateSchema,
   "team": TeamSchema,
   "labels": z.array(LabelSchema),
-  "description": z.string(),
-  "descriptionData": z.string(),
+  "description": z.string().optional(),
+  "descriptionData": z.string().optional(),
 });
 export type Data = z.infer<typeof DataSchema>;
 
