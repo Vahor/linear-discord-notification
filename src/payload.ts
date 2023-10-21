@@ -46,7 +46,7 @@ export const DataSchema = z.object({
 export type Data = z.infer<typeof DataSchema>;
 
 export const PayloadSchema = z.object({
-  "action": z.enum(["create", "update"]),
+  "action": z.enum(["create", "update", "remove"]),
   "createdAt": z.coerce.date(),
   "data": DataSchema,
   "url": z.string(),
