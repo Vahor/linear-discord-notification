@@ -1,4 +1,6 @@
-FROM oven/bun:latest AS build-stage
+FROM oven/bun:1.0.7 AS base
+
+FROM base AS build-stage
 
 WORKDIR /dist
 
@@ -10,7 +12,7 @@ COPY bun.lockb bun.lockb
 RUN bun install
 RUN bun build ./src/index.ts --minify --compile --outfile server
 
-FROM oven/bun:latest
+FROM base
 
 WORKDIR /app
 
